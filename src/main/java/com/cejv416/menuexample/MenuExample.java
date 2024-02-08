@@ -2,9 +2,17 @@ package com.cejv416.menuexample;
 
 import java.util.Scanner;
 
+// Single line comment
+
+/* I
+like
+Mooses
+*/
+
+
 /**
- * An example of a menu
- *
+ * This is an example of a menu system
+ * 
  * @author Ken Fogel
  */
 public class MenuExample {
@@ -28,7 +36,7 @@ public class MenuExample {
     public void perform() {
         char choice;
         double cost = 0.0;
-
+        
         do {
             choice = menu();
             System.out.println("Choice = " + choice);
@@ -98,19 +106,19 @@ public class MenuExample {
     }
 
     /**
-     * Routine to display a menu that accepts choices A to D
-     *
-     * @return the menu choice
+     * 
+     * @return 
      */
     public char menu() {
 
-        char choice = 'z';
+        char choice;
 
         do {
             displayMenuText();
             if (sc.hasNext("[a-dA-D]")) {
                 choice = sc.next().toUpperCase().charAt(0);
             } else {
+                System.out.println("Invalid choice");
                 choice = 'z';
             }
             sc.nextLine();
